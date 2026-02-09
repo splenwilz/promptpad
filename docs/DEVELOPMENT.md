@@ -48,7 +48,7 @@ The `compile` script runs `tsc -p ./` and outputs to the `out/` directory. WebVi
 1. Open the project in VS Code or Cursor
 2. Press `F5` (or **Run > Start Debugging**)
 3. This launches a new **Extension Development Host** window with PromptPad loaded
-4. Open the command palette (`Cmd+Shift+P`) and run **PromptPad: Open**
+4. Press `Cmd+Alt+P` to open PromptPad, or use the command palette (`Cmd+Shift+P`) and run **PromptPad: Open**
 
 ### Debug Configuration
 

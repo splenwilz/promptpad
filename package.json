@@ -51,6 +51,18 @@
         "command": "promptpad.openComposer",
         "title": "PromptPad: Open Composer"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "promptpad.open",
+        "key": "ctrl+alt+p",
+        "mac": "cmd+alt+p"
+      },
+      {
+        "command": "promptpad.openComposer",
+        "key": "ctrl+alt+m",
+        "mac": "cmd+alt+m"
+      }
     ]
   },
   "scripts": {

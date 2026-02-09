@@ -158,8 +158,12 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri): s
                 <span class="hint-key">Esc</span>
             </div>
             <div class="hint-row">
+                <span class="hint-label">Open PromptPad</span>
+                <span class="hint-key">&#8984;&#8997;P</span>
+            </div>
+            <div class="hint-row">
                 <span class="hint-label">Composer mode</span>
-                <span class="hint-key">&#8984;&#8679;P</span>
+                <span class="hint-key">&#8984;&#8997;M</span>
             </div>
         </div>
     </div>

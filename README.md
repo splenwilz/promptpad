@@ -34,7 +34,7 @@ PromptPad gives you a **full-featured prompt editor** — right inside your IDE.
 ## Quick Start
 
 1. **Install** PromptPad from the VS Code Marketplace (or install the `.vsix` file locally)
-2. **Open** the command palette (`Cmd+Shift+P`) and run **PromptPad: Open**
+2. **Open** PromptPad with `Cmd+Alt+P` (or click the pencil icon in the Activity Bar)
 3. **Write** your prompt and press `Cmd+Enter` to send it to Claude
 
 ---
@@ -43,8 +43,8 @@ PromptPad gives you a **full-featured prompt editor** — right inside your IDE.
 
 | Shortcut | Action |
 |---|---|
-| `Cmd+Shift+P` → "PromptPad: Open" | Open the PromptPad panel |
-| `Cmd+Shift+P` → "PromptPad: Composer" | Open Composer mode (full-width) |
+| `Cmd+Alt+P` / `Ctrl+Alt+P` | Open PromptPad sidebar |
+| `Cmd+Alt+M` / `Ctrl+Alt+M` | Open Composer mode (full-width editor tab) |
 | `Cmd+Enter` / `Ctrl+Enter` | Send prompt to Claude |
 | `Escape` | Clear the editor |
 
