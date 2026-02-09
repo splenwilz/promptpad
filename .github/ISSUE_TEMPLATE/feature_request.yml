@@ -1,0 +1,54 @@
+name: Feature Request
+description: Suggest a new feature or improvement for PromptPad
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please describe your idea below.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does this feature solve? What's frustrating or missing today?
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature or change you'd like to see.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: How big is this change?
+      options:
+        - Small (UI tweak, minor behavior change)
+        - Medium (new feature within existing architecture)
+        - Large (new component, architectural change)
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any other context, screenshots, or mockups that help explain the feature.
+    validations:
+      required: false

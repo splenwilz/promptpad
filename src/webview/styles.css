@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--vscode-sideBar-background, var(--vscode-editor-background));
+    color: var(--vscode-editor-foreground);
+    font-family: var(--vscode-font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+    font-size: var(--vscode-font-size, 13px);
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Header ── */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 14px 8px;
+    border-bottom: 1px solid var(--vscode-panel-border, transparent);
+}
+
+.header-icon {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.header-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--vscode-sideBarSectionHeader-foreground, var(--vscode-editor-foreground));
+    flex: 1;
+}
+
+.header-badge {
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 8px;
+    background: var(--vscode-badge-background, #4d4d4d);
+    color: var(--vscode-badge-foreground, #fff);
+}
+
+/* ── Main container ── */
+.promptpad-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    gap: 0;
+}
+
+/* ── Editor area ── */
+.editor-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    border: 1px solid var(--vscode-input-border, var(--vscode-panel-border, #444));
+    border-radius: 6px;
+    background: var(--vscode-input-background, var(--vscode-editor-background));
+    transition: border-color 0.15s ease;
+}
+
+.editor-wrapper:focus-within {
+    border-color: var(--vscode-focusBorder, #007fd4);
+}
+
+textarea {
+    flex: 1;
+    padding: 10px 12px;
+    padding-bottom: 40px;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    color: var(--vscode-input-foreground, var(--vscode-editor-foreground));
+    font-family: var(--vscode-editor-font-family, 'Courier New', monospace);
+    font-size: var(--vscode-editor-font-size, 13px);
+    line-height: 1.6;
+    overflow-y: auto;
+    border-radius: 6px;
+}
+
+textarea::placeholder {
+    color: var(--vscode-input-placeholderForeground, #767676);
+    font-family: var(--vscode-font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+    font-style: italic;
+}
+
+/* ── Bottom bar inside editor ── */
+.editor-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 6px 6px;
+    pointer-events: none;
+    border-radius: 0 0 6px 6px;
+    background: linear-gradient(transparent, var(--vscode-input-background, var(--vscode-editor-background)) 40%);
+}
+
+.editor-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 6px;
+    pointer-events: auto;
+}
+
+.char-count {
+    font-size: 11px;
+    color: var(--vscode-descriptionForeground, #767676);
+    font-variant-numeric: tabular-nums;
+}
+
+.send-button {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background: var(--vscode-button-background, #0e639c);
+    color: var(--vscode-button-foreground, #fff);
+    transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.send-button:hover {
+    background: var(--vscode-button-hoverBackground, #1177bb);
+}
+
+.send-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.send-button .shortcut {
+    font-size: 10px;
+    opacity: 0.65;
+    font-weight: 400;
+}
+
+/* ── Status bar ── */
+.status-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 4px 2px;
+    min-height: 24px;
+}
+
+.status {
+    font-size: 11px;
+    color: var(--vscode-descriptionForeground, #999);
+    transition: color 0.2s ease;
+}
+
+.status.success {
+    color: var(--vscode-testing-iconPassed, #73c991);
+}
+
+.status.error {
+    color: var(--vscode-testing-iconFailed, #f14c4c);
+}
+
+/* ── Hints section ── */
+.hints {
+    padding: 12px 4px 4px;
+    border-top: 1px solid var(--vscode-panel-border, transparent);
+    margin-top: auto;
+}
+
+.hint-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+
+.hint-label {
+    font-size: 11px;
+    color: var(--vscode-descriptionForeground, #767676);
+}
+
+.hint-key {
+    font-size: 10px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: var(--vscode-keybindingLabel-background, rgba(128,128,128,0.15));
+    color: var(--vscode-keybindingLabel-foreground, var(--vscode-descriptionForeground, #999));
+    border: 1px solid var(--vscode-keybindingLabel-border, rgba(128,128,128,0.2));
+    font-family: inherit;
+}
+
+/* ── Loading state ── */
+.loading .send-button .btn-text {
+    display: none;
+}
+
+.loading .send-button .btn-loading {
+    display: inline-flex;
+}
+
+.btn-loading {
+    display: none;
+    align-items: center;
+    gap: 4px;
+}
+
+.spinner {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--vscode-button-foreground, #fff);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

@@ -1,0 +1,13 @@
+.github/
+.vscode/
+.vscode-test/
+docs/
+src/
+test/
+node_modules/
+*.ts
+!out/**/*.js
+tsconfig.json
+.gitignore
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
